@@ -12,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    target: "es2015",
     lib: {
       entry: ["src/index.ts"],
       name: "SearchBar",
