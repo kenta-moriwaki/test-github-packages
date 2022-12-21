@@ -11,4 +11,11 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    lib: {
+      entry: ["src/index.ts"],
+      name: "SearchBar",
+      fileName: "search-bar",
+    },
+  },
 });

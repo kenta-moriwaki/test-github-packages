@@ -1,7 +1,24 @@
 {
-  "name": "vue-web-components",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@kenta-moriwaki/test-github-packages",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenta-moriwaki/test-github-packages.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/search-bar.umd.cjs",
+  "module": "./dist/search-bar.js",
+  "exports": {
+    ".": {
+      "import": "./dist/search-bar.js",
+      "require": "./dist/search-bar.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
